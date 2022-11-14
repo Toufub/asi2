@@ -2,7 +2,7 @@ package com.asi2.user.model;
 
 public class UserDTO {
 
-    private String id;
+    private int id;
     private String name;
     private String surname;
     private String password;
@@ -11,7 +11,7 @@ public class UserDTO {
     public UserDTO() {
     }
 
-    public UserDTO(String id, String name, String surname, String password, double money) {
+    public UserDTO(int id, String name, String surname, String password, double money) {
         this.id = id;
         this.name = name;
         this.surname = surname;
@@ -19,11 +19,11 @@ public class UserDTO {
         this.money = money;
     }
 
-    public String GetId() {
+    public int GetId() {
         return id;
     }
 
-    public void SetId(String id) {
+    public void SetId(int id) {
         this.id = id;
     }
 
