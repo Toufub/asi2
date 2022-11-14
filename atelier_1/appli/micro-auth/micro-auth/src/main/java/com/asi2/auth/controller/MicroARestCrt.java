@@ -1,12 +1,11 @@
 package com.asi2.auth.controller;
 
-import com.asi2.auth.model.UserDTO;
+import com.asi2.common.model.UserDTO;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.asi2.auth.model.UserDTO;
 
 import javax.servlet.http.HttpServletResponse;
 
