@@ -1,0 +1,634 @@
+{
+	"info": {
+		"_postman_id": "9f21eec8-9b9c-4670-85f2-7c7652c6ff6c",
+		"name": "ASI-2 Student",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Local Add User",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"login\":\"jdoe222\",\n\t\"pwd\":\"jdoepwd\",\n\t\"lastName\":\"Doe\",\n\t\"surName\":\"John\",\n\t\"account\":1000\n}\n"
+				},
+				"url": {
+					"raw": "127.0.0.1:8080/user",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8080",
+					"path": [
+						"user"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Local  get Users",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "127.0.0.1:8080/users",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8080",
+					"path": [
+						"users"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Local get Cards",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "127.0.0.1:8080/cards",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8080",
+					"path": [
+						"cards"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Local get Cards to sell",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "127.0.0.1:8080/cards_to_sell",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8080",
+					"path": [
+						"cards_to_sell"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Local  add Card",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n        \"id\": 12,\n        \"name\": \"name2-------------------------------->\",\n        \"description\": \"description2-------------------------------->\",\n        \"family\": \"family2-------------------------------->\",\n        \"affinity\": \"affinity2-------------------------------->\",\n        \"imgUrl\": \"http://medias.3dvf.com/news/sitegrab/gits2045.jpg\",\n        \"smallImgUrl\": \"https://cdn.animenewsnetwork.com/thumbnails/fit600x1000/cms/feature/89858/05.jpg\",\n        \"energy\": 100,\n        \"hp\": 81.19427,\n        \"defence\": 69.24205,\n        \"attack\": 3.1732023,\n        \"price\": 111,\n        \"userId\": null,\n        \"storeId\": null\n    }"
+				},
+				"url": {
+					"raw": "127.0.0.1:8080/card",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8080",
+					"path": [
+						"card"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Local  update Card",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n        \"id\": 12,\n        \"name\": \"------------------------------------------------------------------\",\n        \"description\": \"description6\",\n        \"family\": \"family6\",\n        \"affinity\": \"affinity6\",\n        \"energy\": 100,\n        \"hp\": 0.7758796,\n        \"defence\": 95.48933,\n        \"attack\": 41.27368,\n        \"price\": 1000,\n        \"userId\": 6,\n        \"storeId\": null\n    }"
+				},
+				"url": {
+					"raw": "127.0.0.1:8080/card/12",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8080",
+					"path": [
+						"card",
+						"12"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Local Buy Card",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"user_id\":6,\n\t\"card_id\":11\n}"
+				},
+				"url": {
+					"raw": "127.0.0.1:8080/buy",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8080",
+					"path": [
+						"buy"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Local Sell Card",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"user_id\":6,\n\t\"card_id\":11\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "127.0.0.1:8080/sell",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8080",
+					"path": [
+						"sell"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Local Auth",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"user_id\":12,\n\t\"card_id\":10\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "127.0.0.1:8080/auth?login=jdoe222&pwd=jdoepwd",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8080",
+					"path": [
+						"auth"
+					],
+					"query": [
+						{
+							"key": "login",
+							"value": "jdoe222"
+						},
+						{
+							"key": "pwd",
+							"value": "jdoepwd"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Local  get Transactions",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "127.0.0.1:8080/transaction",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8080",
+					"path": [
+						"transaction"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Remote Server Get User",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://asi2-backend-market.herokuapp.com/users",
+					"protocol": "https",
+					"host": [
+						"asi2-backend-market",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"users"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Remote Server get Card",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://asi2-backend-market.herokuapp.com/cards",
+					"protocol": "https",
+					"host": [
+						"asi2-backend-market",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"cards"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Remote get Cards to sell",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "127.0.0.1:8080/cards_to_sell",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8080",
+					"path": [
+						"cards_to_sell"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Remote Server Add User",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\t\"login\":\"jdoe222\",\r\n\t\"pwd\":\"jdoepwd\",\r\n\t\"lastName\":\"Doe\",\r\n\t\"surName\":\"John\",\r\n\t\"account\":1000\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://asi2-backend-market.herokuapp.com/user",
+					"protocol": "https",
+					"host": [
+						"asi2-backend-market",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"user"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Remote Server add Card",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n        \"id\": 11,\r\n        \"name\": \"name2-------------------------------->\",\r\n        \"description\": \"description2-------------------------------->\",\r\n        \"family\": \"family2-------------------------------->\",\r\n        \"affinity\": \"affinity2-------------------------------->\",\r\n        \"imgUrl\": \"http://medias.3dvf.com/news/sitegrab/gits2045.jpg\",\r\n        \"smallImgUrl\": \"https://cdn.animenewsnetwork.com/thumbnails/fit600x1000/cms/feature/89858/05.jpg\",\r\n        \"energy\": 100,\r\n        \"hp\": 81.19427,\r\n        \"defence\": 69.24205,\r\n        \"attack\": 3.1732023,\r\n        \"price\": 111,\r\n        \"userId\": null,\r\n        \"storeId\": null\r\n    }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://asi2-backend-market.herokuapp.com/card",
+					"protocol": "https",
+					"host": [
+						"asi2-backend-market",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"card"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Remote Sell Card",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\t\"user_id\":12,\r\n\t\"card_id\":10\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://asi2-backend-market.herokuapp.com/sell",
+					"protocol": "https",
+					"host": [
+						"asi2-backend-market",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"sell"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Remote Buy Card",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\t\"user_id\":6,\r\n\t\"card_id\":11\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://asi2-backend-market.herokuapp.com/buy",
+					"protocol": "https",
+					"host": [
+						"asi2-backend-market",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"buy"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Remote get Transactions",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "127.0.0.1:8080/transaction",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8080",
+					"path": [
+						"transaction"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Remote Auth",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"user_id\":12,\n\t\"card_id\":10\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://asi2-backend-market.herokuapp.com/auth?login=jdoe222&pwd=jdoepwd",
+					"protocol": "https",
+					"host": [
+						"asi2-backend-market",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"auth"
+					],
+					"query": [
+						{
+							"key": "login",
+							"value": "jdoe222"
+						},
+						{
+							"key": "pwd",
+							"value": "jdoepwd"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
