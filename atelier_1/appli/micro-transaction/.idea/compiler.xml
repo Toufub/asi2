@@ -6,11 +6,11 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="Micro-Trabsaction-Public" />
+        <module name="Micro-Transaction-Public" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
-      <module name="Micro-Trabsaction-Public" target="1.5" />
+      <module name="Micro-Transaction-Public" target="1.5" />
     </bytecodeTargetLevel>
   </component>
 </project>

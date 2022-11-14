@@ -1,7 +1,5 @@
 package com.asi2.transaction.model;
 
-import java.util.List;
-
 public class TransactionDTO {
 	int id;
     int price;
