@@ -1,7 +1,7 @@
-package com.asi2.example.tools;
+package com.asi2.card.tools;
 
-import com.asi2.example.a.model.ACollectionDTO;
-import com.asi2.example.model.ACollection;
+import com.asi2.card.a.model.ACollectionDTO;
+import com.asi2.card.model.ACollection;
 
 public class ACollectionMapper {
 	

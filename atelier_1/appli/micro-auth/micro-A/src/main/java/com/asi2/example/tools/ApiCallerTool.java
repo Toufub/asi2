@@ -1,11 +1,11 @@
-package com.asi2.example.tools;
+package com.asi2.card.tools;
 
 import org.springframework.http.HttpHeaders;
 import org.springframework.http.MediaType;
 import org.springframework.web.client.RestTemplate;
 
-import com.asi2.example.a.model.ChuckApiModel;
-import com.asi2.example.b.model.BImgDTO;
+import com.asi2.card.a.model.ChuckApiModel;
+import com.asi2.card.b.model.BImgDTO;
 
 public class ApiCallerTool {
 	public final static String B_IMG_URL_BASE="http://localhost:8081";

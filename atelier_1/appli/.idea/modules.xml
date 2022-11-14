@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/micro-card/micro-card-public/Micro-Card-Public.iml" filepath="$PROJECT_DIR$/micro-card/micro-card-public/Micro-Card-Public.iml" />
+      <module fileurl="file://$PROJECT_DIR$/micro-card/micro-card/Micro-card.iml" filepath="$PROJECT_DIR$/micro-card/micro-card/Micro-card.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/appli.iml" filepath="$PROJECT_DIR$/.idea/appli.iml" />
+    </modules>
+  </component>
+</project>

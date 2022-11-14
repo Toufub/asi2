@@ -1,4 +1,4 @@
-package com.asi2.example.model;
+package com.asi2.card.model;
 
 import java.util.List;
 

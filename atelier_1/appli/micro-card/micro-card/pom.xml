@@ -9,11 +9,11 @@
 		<version>2.4.0</version>
 		<relativePath /> <!-- lookup parent from repository -->
 	</parent>
-	<groupId>com.asi2.basic.example</groupId>
-	<artifactId>Micro-A</artifactId>
+	<groupId>com.asi2.card</groupId>
+	<artifactId>Micro-card</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>Micro-A</name>
-	<description>Sample of micro service archi.</description>
+	<name>Micro-Card</name>
+	<description>Service card.</description>
 
 	<properties>
 		<java.version>11</java.version>
@@ -46,6 +46,17 @@
 			<groupId>com.asi2.card</groupId>
 			<artifactId>Micro-Card-Public</artifactId>
 			<version>0.0.1-SNAPSHOT</version>
+		</dependency>
+		<dependency>
+			<groupId>org.xmlunit</groupId>
+			<artifactId>xmlunit-core</artifactId>
+			<version>2.7.0</version>
+			<scope>compile</scope>
+		</dependency>
+		<dependency>
+			<groupId>org.mapstruct</groupId>
+			<artifactId>mapstruct</artifactId>
+			<version>1.4.2.Final</version>
 		</dependency>
 	</dependencies>
 

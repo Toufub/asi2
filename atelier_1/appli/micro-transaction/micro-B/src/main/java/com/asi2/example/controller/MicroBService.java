@@ -1,4 +1,4 @@
-package com.asi2.example.controller;
+package com.asi2.card.controller;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -6,9 +6,9 @@ import java.util.concurrent.ThreadLocalRandom;
 
 import org.springframework.stereotype.Service;
 
-import com.asi2.example.b.model.BImgDTO;
-import com.asi2.example.model.BImg;
-import com.asi2.example.tools.BImgMapper;
+import com.asi2.card.b.model.BImgDTO;
+import com.asi2.card.model.BImg;
+import com.asi2.card.tools.BImgMapper;
 
 @Service
 public class MicroBService {

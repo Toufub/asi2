@@ -1,16 +1,16 @@
-package com.asi2.example.controller;
+package com.asi2.card.controller;
 
 import java.util.ArrayList;
 import java.util.List;
 
 import org.springframework.stereotype.Service;
 
-import com.asi2.example.a.model.ACollectionDTO;
-import com.asi2.example.a.model.ChuckApiModel;
-import com.asi2.example.b.model.BImgDTO;
-import com.asi2.example.model.ACollection;
-import com.asi2.example.tools.ACollectionMapper;
-import com.asi2.example.tools.ApiCallerTool;
+import com.asi2.card.a.model.ACollectionDTO;
+import com.asi2.card.a.model.ChuckApiModel;
+import com.asi2.card.b.model.BImgDTO;
+import com.asi2.card.model.ACollection;
+import com.asi2.card.tools.ACollectionMapper;
+import com.asi2.card.tools.ApiCallerTool;
 
 @Service
 public class MicroAService {

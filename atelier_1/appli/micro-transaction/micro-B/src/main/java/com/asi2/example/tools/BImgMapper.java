@@ -1,7 +1,7 @@
-package com.asi2.example.tools;
+package com.asi2.card.tools;
 
-import com.asi2.example.b.model.BImgDTO;
-import com.asi2.example.model.BImg;
+import com.asi2.card.b.model.BImgDTO;
+import com.asi2.card.model.BImg;
 
 public class BImgMapper {
 	

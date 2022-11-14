@@ -1,4 +1,4 @@
-package com.asi2.example.a.model;
+package com.asi2.card.a.model;
 
 public class ACollectionDTO {
 	
