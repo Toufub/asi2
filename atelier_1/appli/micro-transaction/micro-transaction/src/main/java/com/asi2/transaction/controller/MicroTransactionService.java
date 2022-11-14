@@ -2,6 +2,7 @@ package com.asi2.transaction.controller;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Optional;
 import java.util.concurrent.ThreadLocalRandom;
 
 import org.springframework.stereotype.Service;
@@ -25,18 +26,31 @@ public class MicroTransactionService {
 		}
 		return transactionDtoList;
 	}
-/*
-	public Integer addBImg(BImgDTO bDTO) {
-		BImg b= BImgMapper.FromDTOTOBImg(bDTO);
 
-		BImg bInDb=bRepo.save(b);
-		return bInDb.getId();
+	public TransactionDTO getTransaction(Integer id) {
+		Optional<Transaction> transaction = tRepo.findById(id);
+		if(transaction.isPresent()) {
+			return TransactionMapper.FromTransactionToDTO(transaction.get());
+		} else {
+			return null;
+		}
 	}
 
-	public BImgDTO getRand() {
-		List<BImgDTO> bDTOList =getAllBImg();
-		int randomNum = ThreadLocalRandom.current().nextInt(0, bDTOList.size());
-		return bDTOList.get(randomNum);
+	public Integer addTransaction(TransactionDTO transactionDTO) {
+		Transaction t= TransactionMapper.FromDTOToTransaction(transactionDTO);
+		Transaction tInDb=tRepo.save(t);
+		return tInDb.getId();
 	}
-*/
+
+	public TransactionDTO modifyTransaction(Transaction newTransaction, Integer id) {
+		return this.tRepo.findById(id)
+				.map(transaction -> {
+					transaction.setBuyerId(newTransaction.getBuyerId());
+					transaction.setTransactionDate(newTransaction.getTransactionDate());
+					return TransactionMapper.FromTransactionToDTO(this.tRepo.save(transaction));
+				})
+				.orElseGet(() -> {
+					return null;
+				});
+	}
 }
