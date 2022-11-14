@@ -43,8 +43,8 @@
 		</dependency>
 
 		<dependency>
-			<groupId>com.asi2.card</groupId>
-			<artifactId>Micro-Card-Public</artifactId>
+			<groupId>com.asi2.common</groupId>
+			<artifactId>micro-asi2-public</artifactId>
 			<version>0.0.1-SNAPSHOT</version>
 		</dependency>
 		<dependency>

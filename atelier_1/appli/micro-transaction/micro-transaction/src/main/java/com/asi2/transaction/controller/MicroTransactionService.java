@@ -7,7 +7,7 @@ import java.util.concurrent.ThreadLocalRandom;
 
 import org.springframework.stereotype.Service;
 
-import com.asi2.transaction.model.TransactionDTO;
+import com.asi2.common.model.TransactionDTO;
 import com.asi2.transaction.model.Transaction;
 import com.asi2.transaction.tools.TransactionMapper;
 @Service

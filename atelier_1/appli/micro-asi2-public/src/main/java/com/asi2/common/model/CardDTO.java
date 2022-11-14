@@ -1,6 +1,6 @@
-package com.asi2.card.model;
+package com.asi2.common.model;
 
-public class CardDto {
+public class CardDTO {
 
 	private int id;
 	private String name;
@@ -12,10 +12,10 @@ public class CardDto {
 	private int userId;
 	private int transactionId;
 
-	public CardDto() {
+	public CardDTO() {
 	}
 
-	public CardDto(int id, String name,String description, String affinity, String energy, Double price, String family, int userId, int transactionId) {
+	public CardDTO(int id, String name,String description, String affinity, String energy, Double price, String family, int userId, int transactionId) {
 		this.id = id;
 		this.name = name;
 		this.description = description;

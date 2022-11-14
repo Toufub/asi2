@@ -3,14 +3,11 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/micro-auth/micro-auth/Micro-Auth.iml" filepath="$PROJECT_DIR$/micro-auth/micro-auth/Micro-Auth.iml" />
-      <module fileurl="file://$PROJECT_DIR$/micro-auth/micro-auth-public/Micro-Auth-Public.iml" filepath="$PROJECT_DIR$/micro-auth/micro-auth-public/Micro-Auth-Public.iml" />
-      <module fileurl="file://$PROJECT_DIR$/micro-card/micro-card-public/Micro-Card-Public.iml" filepath="$PROJECT_DIR$/micro-card/micro-card-public/Micro-Card-Public.iml" />
       <module fileurl="file://$PROJECT_DIR$/micro-transaction/micro-transaction/Micro-Transaction.iml" filepath="$PROJECT_DIR$/micro-transaction/micro-transaction/Micro-Transaction.iml" />
-      <module fileurl="file://$PROJECT_DIR$/micro-transaction/micro-transaction-public/Micro-Transaction-Public.iml" filepath="$PROJECT_DIR$/micro-transaction/micro-transaction-public/Micro-Transaction-Public.iml" />
       <module fileurl="file://$PROJECT_DIR$/micro-card/micro-card/Micro-card.iml" filepath="$PROJECT_DIR$/micro-card/micro-card/Micro-card.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/appli.iml" filepath="$PROJECT_DIR$/.idea/appli.iml" />
+      <module fileurl="file://$PROJECT_DIR$/micro-asi2-public/micro-asi2-public.iml" filepath="$PROJECT_DIR$/micro-asi2-public/micro-asi2-public.iml" />
       <module fileurl="file://$PROJECT_DIR$/micro-user/micro-user/micro-user.iml" filepath="$PROJECT_DIR$/micro-user/micro-user/micro-user.iml" />
-      <module fileurl="file://$PROJECT_DIR$/micro-user/micro-user-public/micro-user-public.iml" filepath="$PROJECT_DIR$/micro-user/micro-user-public/micro-user-public.iml" />
     </modules>
   </component>
 </project>

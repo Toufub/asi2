@@ -1,4 +1,4 @@
-package com.asi2.user.model;
+package com.asi2.common.model;
 
 import java.io.Serializable;
 

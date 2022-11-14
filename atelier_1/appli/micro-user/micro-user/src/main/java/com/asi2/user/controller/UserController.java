@@ -6,7 +6,7 @@ import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.*;
 
 import com.asi2.user.model.User;
-import com.asi2.user.model.UserDTO;
+import com.asi2.common.model.UserDTO;
 import com.asi2.user.tools.UserMapper;
 
 import javax.servlet.http.Cookie;

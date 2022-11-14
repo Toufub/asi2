@@ -1,4 +1,4 @@
-package com.asi2.transaction.model;
+package com.asi2.common.model;
 
 import java.util.Date;
 

@@ -1,6 +1,6 @@
 package com.asi2.user.tools;
 
-import com.asi2.user.model.UserDTO;
+import com.asi2.common.model.UserDTO;
 
 import java.util.Optional;
 

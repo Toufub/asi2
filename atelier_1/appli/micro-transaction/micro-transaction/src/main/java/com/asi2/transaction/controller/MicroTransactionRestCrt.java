@@ -4,8 +4,7 @@ import java.util.List;
 
 import com.asi2.transaction.model.Transaction;
 import org.springframework.web.bind.annotation.*;
-
-import com.asi2.transaction.model.TransactionDTO;
+import com.asi2.common.model.TransactionDTO;
 
 @RestController
 public class MicroTransactionRestCrt {

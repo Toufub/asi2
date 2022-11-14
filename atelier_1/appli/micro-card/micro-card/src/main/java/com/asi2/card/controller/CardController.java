@@ -1,8 +1,8 @@
 package com.asi2.card.controller;
 
 import com.asi2.card.model.Card;
-import com.asi2.card.model.CardDto;
 import com.asi2.card.tools.CardMapper;
+import com.asi2.common.model.CardDTO;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
@@ -16,7 +16,7 @@ public class CardController {
 	}
 
 	@RequestMapping(value = "/api/cards", method = RequestMethod.POST)
-	public Card addCard(@RequestBody CardDto cardDto) {
+	public Card addCard(@RequestBody CardDTO cardDto) {
 		Card card = CardMapper.INSTANCE.toModel(cardDto);
 		cService.addCard(card);
 		return card;

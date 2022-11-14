@@ -6,11 +6,10 @@
         <option value="$PROJECT_DIR$/micro-user/micro-user/pom.xml" />
         <option value="$PROJECT_DIR$/micro-transaction/micro-transaction/pom.xml" />
         <option value="$PROJECT_DIR$/micro-user/micro-user-public/pom.xml" />
-        <option value="$PROJECT_DIR$/micro-transaction/micro-transaction-public/pom.xml" />
         <option value="$PROJECT_DIR$/micro-card/micro-card/pom.xml" />
-        <option value="$PROJECT_DIR$/micro-card/micro-card-public/pom.xml" />
         <option value="$PROJECT_DIR$/micro-auth/micro-auth/pom.xml" />
-        <option value="$PROJECT_DIR$/micro-auth/micro-auth-public/pom.xml" />
+        <option value="$PROJECT_DIR$/micro-atelier-public/pom.xml" />
+        <option value="$PROJECT_DIR$/micro-asi2-public/pom.xml" />
       </list>
     </option>
   </component>

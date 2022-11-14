@@ -1,14 +1,8 @@
 package com.asi2.auth.controller;
 
-import com.asi2.auth.model.UserDTO;
 import org.springframework.stereotype.Service;
 
-import com.asi2.auth.a.model.UserDTO;
-import com.asi2.auth.a.model.ChuckApiModel;
-import com.asi2.auth.b.model.BImgDTO;
-import com.asi2.auth.model.ACollection;
-import com.asi2.auth.tools.ACollectionMapper;
-import com.asi2.auth.tools.ApiCallerTool;
+import com.asi2.common.model.UserDTO;
 
 @Service
 public class MicroAuthService {
@@ -21,7 +15,7 @@ public class MicroAuthService {
 		return null;
 	}
 
-	public UsersDto findByUsername(String username){
+	public UserDTO findByUsername(String username){
 		return null;
 	}
 
