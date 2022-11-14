@@ -9,11 +9,11 @@
 		<version>2.4.0</version>
 		<relativePath /> <!-- lookup parent from repository -->
 	</parent>
-	<groupId>com.asi2.basic.example</groupId>
-	<artifactId>Micro-A</artifactId>
+	<groupId>com.asi2.auth</groupId>
+	<artifactId>Micro-Auth</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>Micro-A</name>
-	<description>Sample of micro service archi.</description>
+	<name>Micro-Auth</name>
+	<description>MicroService auth</description>
 
 	<properties>
 		<java.version>11</java.version>
@@ -43,14 +43,8 @@
 		</dependency>
 
 		<dependency>
-			<groupId>com.asi2.basic.example</groupId>
-			<artifactId>Micro-A-Public</artifactId>
-			<version>0.0.1-SNAPSHOT</version>
-		</dependency>
-
-		<dependency>
-			<groupId>com.asi2.basic.example</groupId>
-			<artifactId>Micro-B-Public</artifactId>
+			<groupId>com.asi2.auth</groupId>
+			<artifactId>Micro-Auth-Public</artifactId>
 			<version>0.0.1-SNAPSHOT</version>
 		</dependency>
 
