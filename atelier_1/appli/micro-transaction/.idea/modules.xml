@@ -2,7 +2,8 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/micro-transaction-public/Micro-Trabsaction-Public.iml" filepath="$PROJECT_DIR$/micro-transaction-public/Micro-Trabsaction-Public.iml" />
+      <module fileurl="file://$PROJECT_DIR$/micro-transaction/Micro-Transaction.iml" filepath="$PROJECT_DIR$/micro-transaction/Micro-Transaction.iml" />
+      <module fileurl="file://$PROJECT_DIR$/micro-transaction-public/Micro-Transaction-Public.iml" filepath="$PROJECT_DIR$/micro-transaction-public/Micro-Transaction-Public.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/micro-transaction.iml" filepath="$PROJECT_DIR$/.idea/micro-transaction.iml" />
     </modules>
   </component>
