@@ -1,5 +1,7 @@
 package com.asi2.transaction.model;
 
+import java.util.Date;
+
 public class TransactionDTO {
 	private Integer id;
     private Integer  price;
@@ -7,6 +9,11 @@ public class TransactionDTO {
     private Integer  buyerId;
     private Integer  sellerId;
 
+    private Date transactionDate;
+
+    public TransactionDTO() {
+
+    }
     public Integer getId() {
         return id;
     }
@@ -45,5 +52,13 @@ public class TransactionDTO {
 
     public void setSellerId(Integer sellerId) {
         this.sellerId = sellerId;
+    }
+
+    public Date getTransactionDate() {
+        return transactionDate;
+    }
+
+    public void setTransactionDate(Date transactionDate) {
+        this.transactionDate = transactionDate;
     }
 }

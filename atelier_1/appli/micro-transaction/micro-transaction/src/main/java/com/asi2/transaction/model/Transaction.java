@@ -4,6 +4,7 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import java.util.Date;
 
 @Entity
 public class Transaction {
@@ -16,6 +17,12 @@ public class Transaction {
 	private Integer  cardId;
 	private Integer  buyerId;
 	private Integer  sellerId;
+
+	private Date transactionDate;
+
+	public Transaction() {
+
+	}
 
 	public Integer getId() {
 		return id;
@@ -55,5 +62,13 @@ public class Transaction {
 
 	public void setSellerId(Integer sellerId) {
 		this.sellerId = sellerId;
+	}
+
+	public Date getTransactionDate() {
+		return transactionDate;
+	}
+
+	public void setTransactionDate(Date transactionDate) {
+		this.transactionDate = transactionDate;
 	}
 }
