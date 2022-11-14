@@ -114,6 +114,5 @@
     <orderEntry type="library" scope="TEST" name="Maven: org.xmlunit:xmlunit-core:2.7.0" level="project" />
     <orderEntry type="library" scope="RUNTIME" name="Maven: com.h2database:h2:1.4.200" level="project" />
     <orderEntry type="module" module-name="Micro-Auth-Public" />
-    <orderEntry type="library" name="Maven: com.asi2.basic.example:Micro-B-Public:0.0.1-SNAPSHOT" level="project" />
   </component>
 </module>
