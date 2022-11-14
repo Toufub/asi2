@@ -10,6 +10,6 @@ import java.util.UUID;
 
 @Repository
 public interface UserRepository extends CrudRepository<User, UUID> {
-    @Query("select u from User u where u.name = ?1")
+    @Query("select u from User u where u.login = ?1")
     public User findByUsername(String username);
 }

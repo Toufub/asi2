@@ -1,5 +1,6 @@
 package com.asi2.user.controller;
 
+import com.asi2.user.tools.JmsProducer;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.*;
@@ -13,10 +14,7 @@ import javax.servlet.http.HttpServletResponse;
 import java.text.ParseException;
 import java.time.Instant;
 import java.time.temporal.ChronoUnit;
-import java.util.Date;
-import java.util.List;
-import java.util.Optional;
-import java.util.UUID;
+import java.util.*;
 import java.util.stream.Collectors;
 
 @RestController
@@ -25,17 +23,16 @@ public class UserController {
 
     @Autowired
     private UserService userService;
-
     @Autowired
-    //private AuthService authService = new AuthService();
+    JmsProducer jmsProducer;
 
     /**
      * Read - Get one user
      * @param id The id of the user
      * @return An User object full filled
      */
-    @GetMapping("/api/user/{id}")
-    public UserDTO getById(@PathVariable final int id) {
+    @RequestMapping(method = RequestMethod.GET, value = "/users/{id}")
+    public UserDTO getById(@PathVariable Integer id) {
         return convertToDTO(userService.getUser(id));
     }
 
@@ -43,10 +40,10 @@ public class UserController {
      * Read - Get all users
      * @return A list of User object full filled
      */
-    @GetMapping("/api/user")
+    @GetMapping("/user")
     public Iterable<UserDTO> getAll() {
         List<User> userList = (List<User>) userService.getAllUsers();
-        List<UserDTO> userDTOList = null;
+        List<UserDTO> userDTOList = new ArrayList<UserDTO>();
         for (User user : userList) {
             userDTOList.add(convertToDTO(user));
         }
@@ -58,11 +55,12 @@ public class UserController {
      * @param userDTO An object user
      * @return The user object saved
      */
-    @PostMapping("/api/user")
+    @PostMapping("/user")
     public UserDTO create(@RequestBody UserDTO userDTO) throws ParseException {
-        User user = convertToEntity(userDTO);
-        User userCreate = userService.createUser(user);
-        return convertToDTO(userCreate);
+        //User user = convertToEntity(userDTO);
+        this.jmsProducer.sendMessage(userDTO);
+        //User userCreate = userService.createUser(user);
+        return userDTO;
     }
 
     /*

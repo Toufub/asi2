@@ -1,61 +1,75 @@
 package com.asi2.user.model;
 
-public class UserDTO {
+import java.io.Serializable;
 
-    private int id;
-    private String name;
-    private String surname;
-    private String password;
-    private double money;
+public class UserDTO implements Serializable {
+
+    private static final long serialVersionUID = -6470090944414208495L;
+    private Integer id;
+    private String login;
+    private String lastName;
+    private String surName;
+    private String pwd;
+    private double account;
 
     public UserDTO() {
+
     }
 
-    public UserDTO(int id, String name, String surname, String password, double money) {
+    public UserDTO(Integer id, String login, String lastName, String surName, String pwd, double account) {
         this.id = id;
-        this.name = name;
-        this.surname = surname;
-        this.password = password;
-        this.money = money;
+        this.login = login;
+        this.lastName = lastName;
+        this.surName = surName;
+        this.pwd = pwd;
+        this.account = account;
     }
 
-    public int GetId() {
+    public Integer getId() {
         return id;
     }
 
-    public void SetId(int id) {
+    public void setId(Integer id) {
         this.id = id;
     }
 
-    public String GetName() {
-        return name;
+    public String getLogin() {
+        return login;
     }
 
-    public void SetName(String name) {
-        this.name = name;
+    public void setLogin(String login) {
+        this.login = login;
     }
 
-    public String GetSurname() {
-        return surname;
+    public String getLastName() {
+        return lastName;
     }
 
-    public void SetSurname(String surname) {
-        this.surname = surname;
+    public void setLastName(String lastName) {
+        this.lastName = lastName;
     }
 
-    public String GetPassword() {
-        return password;
+    public String getSurName() {
+        return surName;
     }
 
-    public void SetPassword(String password) {
-        this.password = password;
+    public void setSurName(String surName) {
+        this.surName = surName;
     }
 
-    public double GetMoney() {
-        return this.money;
+    public String getPwd() {
+        return pwd;
     }
 
-    public void SetMonet(double money) {
-        this.money = money;
+    public void setPwd(String pwd) {
+        this.pwd = pwd;
+    }
+
+    public double getAccount() {
+        return account;
+    }
+
+    public void setAccount(double account) {
+        this.account = account;
     }
 }

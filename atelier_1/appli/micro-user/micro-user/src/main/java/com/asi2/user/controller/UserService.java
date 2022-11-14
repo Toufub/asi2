@@ -40,7 +40,7 @@ public class UserService {
     public User putUser(final int id, double money) {
         return (userRepository.findById(UUID.fromString(String.valueOf(id)))
                 .map(user -> {
-                    user.SetMoney(money);
+                    user.setAccount(money);
                     return userRepository.save(user);
                 })
                 .orElseGet(() -> {
@@ -51,7 +51,7 @@ public class UserService {
     public User checkLogin(String username, String password){
         User user = userRepository.findByUsername(username);
         if(user != null && password != ""){
-            if(password.equals(user.GetPassword())){
+            if(password.equals(user.getPwd())){
                 return user;
             }
         }
