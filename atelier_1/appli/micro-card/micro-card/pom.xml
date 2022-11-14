@@ -43,17 +43,10 @@
 		</dependency>
 
 		<dependency>
-			<groupId>com.asi2.basic.example</groupId>
-			<artifactId>Micro-A-Public</artifactId>
+			<groupId>com.asi2.card</groupId>
+			<artifactId>Micro-Card-Public</artifactId>
 			<version>0.0.1-SNAPSHOT</version>
 		</dependency>
-
-		<dependency>
-			<groupId>com.asi2.basic.example</groupId>
-			<artifactId>Micro-B-Public</artifactId>
-			<version>0.0.1-SNAPSHOT</version>
-		</dependency>
-
 	</dependencies>
 
 	<build>
