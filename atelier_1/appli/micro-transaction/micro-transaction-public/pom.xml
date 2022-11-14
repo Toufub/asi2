@@ -4,10 +4,10 @@
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>com.asi2.basic.example</groupId>
-	<artifactId>Micro-B-Public</artifactId>
+	<artifactId>Micro-Trabsaction-Public</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<name>Micro-B-Public</name>
-	<description>Sample of micro service archi.</description>
+	<description>Transaction model DTO public</description>
 
 	<properties>
 		<java.version>11</java.version>
