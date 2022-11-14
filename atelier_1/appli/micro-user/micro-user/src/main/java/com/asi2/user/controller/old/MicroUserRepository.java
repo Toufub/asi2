@@ -1,4 +1,4 @@
-package com.asi2.user.controller;
+package com.asi2.user.controller.old;
 
 import org.springframework.data.repository.CrudRepository;
 

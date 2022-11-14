@@ -6,18 +6,18 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="micro-user" />
         <module name="micro-user-public" />
+        <module name="micro-user" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
-      <module name="micro-user" target="1.5" />
-      <module name="micro-user-public" target="1.5" />
+      <module name="micro-user" target="11" />
+      <module name="micro-user-public" target="11" />
     </bytecodeTargetLevel>
   </component>
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
-      <module name="micro-user" options="" />
+      <module name="micro-user" options="-parameters" />
     </option>
   </component>
 </project>

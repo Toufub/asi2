@@ -1,5 +1,6 @@
 package com.asi2.user.model;
 
+import java.util.Objects;
 import java.util.UUID;
 
 import javax.persistence.Entity;
@@ -12,31 +13,27 @@ public class User {
 
 	@Id
 	@GeneratedValue(strategy = GenerationType.AUTO)
-	private String id;
+	private int id;
 	private String name;
 	private String surname;
 	private String password;
 	private double money;
 
 	public User() {
-		UUID UUID_1 = UUID.randomUUID();
-		this.id = UUID_1.toString();
 	}
 
 	public User(String name, String surname, String password, double money) {
-		UUID UUID_1 = UUID.randomUUID();
-		this.id = UUID_1.toString();
 		this.name = name;
 		this.surname = surname;
 		this.password = password;
 		this.money = money;
 	}
 
-	public String GetId() {
+	public int GetId() {
 		return id;
 	}
 
-	public void SetId(String id) {
+	public void SetId(int id) {
 		this.id = id;
 	}
 
@@ -68,7 +65,30 @@ public class User {
 		return this.money;
 	}
 
-	public void SetMonet(double money) {
+	public void SetMoney(double money) {
 		this.money = money;
 	}
+
+    @Override
+    public String toString() {
+        return "User{" +
+                "id =" + id +
+                ", name ='" + name + '\'' +
+                ", password ='" + password + '\'' +
+                ", balance =" + money +
+                '}';
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (o == this) return true;
+        if (!(o instanceof User)) return false;
+        User other = (User) o;
+        return this.GetId() == other.GetId();
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(id);
+    }
 }
