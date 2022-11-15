@@ -5,10 +5,10 @@ import java.util.Date;
 
 public class TransactionDTO implements Serializable {
 	private Integer id;
-    private Integer  price;
-    private Integer  cardId;
+    private double  price;
+    private Integer  card_id;
     private Integer  buyerId;
-    private Integer  sellerId;
+    private Integer  user_id;
 
     private Date transactionDate;
 
@@ -23,20 +23,20 @@ public class TransactionDTO implements Serializable {
         this.id = id;
     }
 
-    public Integer getPrice() {
+    public double getPrice() {
         return price;
     }
 
-    public void setPrice(Integer price) {
+    public void setPrice(double price) {
         this.price = price;
     }
 
     public Integer getCardId() {
-        return cardId;
+        return card_id;
     }
 
-    public void setCardId(Integer cardId) {
-        this.cardId = cardId;
+    public void setCardId(Integer card_id) {
+        this.card_id = card_id;
     }
 
     public Integer getBuyerId() {
@@ -47,12 +47,12 @@ public class TransactionDTO implements Serializable {
         this.buyerId = buyerId;
     }
 
-    public int getSellerId() {
-        return sellerId;
+    public int getUserId() {
+        return user_id;
     }
 
-    public void setSellerId(Integer sellerId) {
-        this.sellerId = sellerId;
+    public void setUserId(Integer user_id) {
+        this.user_id = user_id;
     }
 
     public Date getTransactionDate() {

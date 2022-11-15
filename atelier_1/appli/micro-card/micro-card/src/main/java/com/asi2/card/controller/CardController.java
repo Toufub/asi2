@@ -26,7 +26,7 @@ public class CardController {
 		return cardDto;
 	}
 
-	@RequestMapping(value = "/card/{id}", method = RequestMethod.GET)
+	@RequestMapping(value = "/cards/{id}", method = RequestMethod.GET)
 	public Card getCard(@PathVariable int id) {
 		return cService.getCard(id);
 	}
@@ -42,11 +42,8 @@ public class CardController {
 	}
 
 	@RequestMapping(method = RequestMethod.PUT, value="/card/{id}")
-	public boolean modifyCard(@RequestBody CardDTO newCard, @PathVariable Integer id) {
-		Object [] parameters = {Integer.toString(id), newCard};
-		this.jmsProducer.sendPutMessage(parameters);
-		return true;
-		//return this.transactionService.modifyTransaction(id, newTransaction);
+	public CardDTO modifyCard(@RequestBody CardDTO newCard, @PathVariable Integer id) {
+		return this.cService.modifyCard(id, newCard);
 	}
 
 }

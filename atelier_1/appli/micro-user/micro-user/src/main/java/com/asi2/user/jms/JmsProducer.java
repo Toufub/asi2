@@ -13,22 +13,13 @@ import java.lang.reflect.Array;
 @Slf4j
 public class JmsProducer {
 
-        @Autowired
-        JmsTemplate jmsTemplate;
+    @Autowired
+    JmsTemplate jmsTemplate;
 
-        public void sendCreationMessage(UserDTO message){
-            try{
-                log.info("Attempting Send message to Topic: user.create");
-                jmsTemplate.convertAndSend("user.create", message);
-            } catch(Exception e){
-                log.error("Recieved Exception during send Message: ", e);
-            }
-        }
-
-    public void sendPutMessage(Object [] parameters){
+    public void sendCreationMessage(UserDTO message){
         try{
-            log.info("Attempting Send message to Topic: user.put");
-            jmsTemplate.convertAndSend("user.put", parameters);
+            log.info("Attempting Send message to Topic: user.create");
+            jmsTemplate.convertAndSend("user.create", message);
         } catch(Exception e){
             log.error("Recieved Exception during send Message: ", e);
         }

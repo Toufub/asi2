@@ -28,6 +28,7 @@ public class CardService {
 		return this.cRepo.findById(id)
 				.map(card -> {
 					card.setPrice(newCard.getPrice());
+					card.setUserId(newCard.getUserId());
 					return CardMapper.FromCardToDTO(this.cRepo.save(card));
 				})
 				.orElseGet(() -> {

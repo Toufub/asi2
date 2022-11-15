@@ -21,11 +21,11 @@ public class TransactionController {
 		return this.transactionService.getAllTransactions();
 	}
 
-	@RequestMapping(method = RequestMethod.POST, value = "/transaction")
-	public TransactionDTO addTransaction(@RequestBody TransactionDTO transactionDTO) {
-		this.jmsProducer.sendCreationMessage(transactionDTO);
+	@RequestMapping(method = RequestMethod.POST, value = "/sell")
+	public TransactionDTO addTransaction(@CookieValue(name = "login") String login,
+										 @RequestBody TransactionDTO transactionDTO) {
+		this.jmsProducer.sendCreationMessage(transactionDTO, login);
 		return transactionDTO;
-		//return this.transactionService.addTransaction(transactionDTO);
 	}
 
 	@RequestMapping(method = RequestMethod.GET, value = "/transaction/{id}")
@@ -34,9 +34,10 @@ public class TransactionController {
 	}
 
 	@RequestMapping(method = RequestMethod.PUT, value="/transaction/{id}")
-	public boolean modifyTransaction(@RequestBody TransactionDTO newTransaction, @PathVariable Integer id) {
-		Object [] parameters = {Integer.toString(id), newTransaction};
-		this.jmsProducer.sendPutMessage(parameters);
+	public boolean modifyTransaction(@CookieValue(name = "login") String login,
+									 @RequestBody TransactionDTO newTransaction, @PathVariable Integer id) {
+		Object [] parameters = {Integer.toString(id), newTransaction, login};
+		this.jmsProducer.sendPutMessage(id, newTransaction, login);
 		return true;
 		//return this.transactionService.modifyTransaction(id, newTransaction);
 	}

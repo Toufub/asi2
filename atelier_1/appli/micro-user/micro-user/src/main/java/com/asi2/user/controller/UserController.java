@@ -30,6 +30,11 @@ public class UserController {
         return UserMapper.UserToDTO(userService.getUser(id));
     }
 
+    @RequestMapping(method = RequestMethod.GET, value = "/users/login/{login}")
+    public UserDTO getByLogin(@PathVariable String login) {
+        return UserMapper.UserToDTO(userService.getByLogin(login));
+    }
+
     /**
      * Read - Get all users
      * @return A list of User object full filled
@@ -61,10 +66,8 @@ public class UserController {
      * @param userDTO - The new values to change (account)
      */
     @RequestMapping(method = RequestMethod.PUT, value = "/users/{id}")
-    public boolean putMoney(@PathVariable final int id, @RequestBody UserDTO userDTO) {
-        Object [] parameters = {Integer.toString(id), userDTO};
-        this.jmsProducer.sendPutMessage(parameters);
-        return true;
+    public UserDTO putMoney(@PathVariable final int id, @RequestBody UserDTO userDTO) {
+        return this.userService.putUser(id, userDTO);
     }
 
     /**

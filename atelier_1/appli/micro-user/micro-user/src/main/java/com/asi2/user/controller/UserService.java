@@ -30,6 +30,10 @@ public class UserService {
         }
     }
 
+    public User getByLogin(String login) {
+        return userRepository.findByUsername(login);
+    }
+
     public void deleteUser(final int id) {
         userRepository.deleteById(id);
     }
@@ -50,14 +54,5 @@ public class UserService {
                 });
     }
 
-    public User checkLogin(String username, String password){
-        User user = userRepository.findByUsername(username);
-        if(user != null && password != ""){
-            if(password.equals(user.getPwd())){
-                return user;
-            }
-        }
-        return null;
-    }
 
 }

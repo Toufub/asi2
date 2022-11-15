@@ -29,14 +29,4 @@ public class JmsConsumer {
         }
     }
 
-    @JmsListener(destination = "card.put")
-    public void onPutMessage(Object [] message) {
-        try{
-            log.info("Received Message: card-put "+ message[0]);
-            cardService.modifyCard(Integer.parseInt(message[0].toString()), (CardDTO)message[1]);
-            // TODO : Notif
-        } catch(Exception e) {
-            log.error("Received Exception : "+ e);
-        }
-    }
 }

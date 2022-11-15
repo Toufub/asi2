@@ -10,23 +10,13 @@ import org.springframework.stereotype.Component;
 @Component
 @Slf4j
 public class JmsProducer {
+    @Autowired
+    JmsTemplate jmsTemplate;
 
-        @Autowired
-        JmsTemplate jmsTemplate;
-
-        public void sendCreationMessage(CardDTO message){
-            try{
-                log.info("Attempting Send message to Topic: card.create");
-                jmsTemplate.convertAndSend("card.create", message);
-            } catch(Exception e){
-                log.error("Recieved Exception during send Message: ", e);
-            }
-        }
-
-    public void sendPutMessage(Object [] parameters){
+    public void sendCreationMessage(CardDTO message){
         try{
-            log.info("Attempting Send message to Topic: card.put");
-            jmsTemplate.convertAndSend("card.put", parameters);
+            log.info("Attempting Send message to Topic: card.create");
+            jmsTemplate.convertAndSend("card.create", message);
         } catch(Exception e){
             log.error("Recieved Exception during send Message: ", e);
         }

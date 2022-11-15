@@ -30,14 +30,4 @@ public class JmsConsumer {
         }
     }
 
-    @JmsListener(destination = "user.put")
-    public void onPutMessage(Object [] message) {
-        try{
-            log.info("Received Message: user-put "+ message[0]);
-            userService.putUser(Integer.parseInt(message[0].toString()), (UserDTO)message[1]);
-            // TODO : Notif
-        } catch(Exception e) {
-            log.error("Received Exception : "+ e);
-        }
-    }
 }
