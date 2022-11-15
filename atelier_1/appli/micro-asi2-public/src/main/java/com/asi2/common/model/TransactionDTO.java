@@ -1,8 +1,9 @@
 package com.asi2.common.model;
 
+import java.io.Serializable;
 import java.util.Date;
 
-public class TransactionDTO {
+public class TransactionDTO implements Serializable {
 	private Integer id;
     private Integer  price;
     private Integer  cardId;

@@ -1,6 +1,8 @@
 package com.asi2.common.model;
 
-public class CardDTO {
+import java.io.Serializable;
+
+public class CardDTO implements Serializable {
 	private int id;
 	private String name;
 	private String description;
