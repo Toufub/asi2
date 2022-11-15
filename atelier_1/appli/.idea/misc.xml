@@ -1,21 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
-<<<<<<< HEAD
   <component name="MavenProjectsManager">
     <option name="originalFiles">
       <list>
         <option value="$PROJECT_DIR$/micro-user/micro-user/pom.xml" />
-        <option value="$PROJECT_DIR$/micro-transaction/micro-transaction/pom.xml" />
-        <option value="$PROJECT_DIR$/micro-user/micro-user-public/pom.xml" />
-        <option value="$PROJECT_DIR$/micro-card/micro-card/pom.xml" />
-        <option value="$PROJECT_DIR$/micro-auth/micro-auth/pom.xml" />
-        <option value="$PROJECT_DIR$/micro-atelier-public/pom.xml" />
-        <option value="$PROJECT_DIR$/micro-asi2-public/pom.xml" />
       </list>
     </option>
   </component>
-  <component name="ProjectRootManager" version="2" languageLevel="JDK_18" default="true" project-jdk-name="18" project-jdk-type="JavaSDK" />
-=======
-  <component name="ProjectRootManager" version="2" default="true" />
->>>>>>> cd5ab1a (ajax function)
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" project-jdk-name="18" project-jdk-type="JavaSDK" />
 </project>

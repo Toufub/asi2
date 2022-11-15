@@ -10,9 +10,7 @@
       <configuration>
         <setting name="validation-enabled" value="true" />
         <setting name="provider-name" value="Hibernate" />
-        <datasource-mapping>
-          <factory-entry name="entityManagerFactory" />
-        </datasource-mapping>
+        <datasource-mapping />
         <naming-strategy-map />
       </configuration>
     </facet>
@@ -116,7 +114,7 @@
     <orderEntry type="library" scope="TEST" name="Maven: org.springframework:spring-test:5.3.1" level="project" />
     <orderEntry type="library" scope="TEST" name="Maven: org.xmlunit:xmlunit-core:2.7.0" level="project" />
     <orderEntry type="library" scope="RUNTIME" name="Maven: com.h2database:h2:1.4.200" level="project" />
-    <orderEntry type="module" module-name="micro-asi2-public" />
+    <orderEntry type="library" name="Maven: com.asi2.common:micro-asi2-public:0.0.1-SNAPSHOT" level="project" />
     <orderEntry type="library" name="Maven: org.springframework.boot:spring-boot-starter-activemq:2.4.0" level="project" />
     <orderEntry type="library" name="Maven: org.springframework:spring-jms:5.3.1" level="project" />
     <orderEntry type="library" name="Maven: org.springframework:spring-messaging:5.3.1" level="project" />
