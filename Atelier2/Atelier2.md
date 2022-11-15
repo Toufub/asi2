@@ -13,3 +13,4 @@ Node.Js se base sur le moteur Javascript pour réaliser des opérations en backe
 - NodeJS n'est pas bon avec les calculs lourds
 - La gestion des dépendances peut vite poser problèmes et de nombreuses failles sont régulièrement trouvées
 
+
