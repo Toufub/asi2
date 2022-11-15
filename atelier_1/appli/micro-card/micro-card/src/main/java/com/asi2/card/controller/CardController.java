@@ -16,10 +16,9 @@ public class CardController {
 	}
 
 	@RequestMapping(value = "/api/cards", method = RequestMethod.POST)
-	public Card addCard(@RequestBody CardDTO cardDto) {
-		Card card = CardMapper.INSTANCE.toModel(cardDto);
-		cService.addCard(card);
-		return card;
+	public CardDTO addCard(@RequestBody CardDTO cardDto) {
+		cService.addCard(cardDto);
+		return cardDto;
 	}
 
 	@RequestMapping(value = "/api/cards/{id}", method = RequestMethod.GET)
