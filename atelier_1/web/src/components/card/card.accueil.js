@@ -1,11 +1,10 @@
-import './App.css';
-import CardList from './components/card/card.list.js'
+import CardList from './card.list.js'
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 
-function App() {
+function CardAccueil() {
   return (
-    <div className="App">
+    <div>
       <h1>Welcome to card shop</h1>
       <Row>
         <Col md={4} lg={4}>
@@ -16,4 +15,4 @@ function App() {
   );
 }
 
-export default App;
+export default CardAccueil;

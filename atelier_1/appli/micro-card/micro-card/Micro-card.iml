@@ -112,7 +112,7 @@
     <orderEntry type="library" name="Maven: org.springframework:spring-jcl:5.3.1" level="project" />
     <orderEntry type="library" scope="TEST" name="Maven: org.springframework:spring-test:5.3.1" level="project" />
     <orderEntry type="library" scope="RUNTIME" name="Maven: com.h2database:h2:1.4.200" level="project" />
-    <orderEntry type="module" module-name="Micro-Card-Public" />
+    <orderEntry type="library" name="Maven: com.asi2.card:Micro-Card-Public:0.0.1-SNAPSHOT" level="project" />
     <orderEntry type="library" name="Maven: org.xmlunit:xmlunit-core:2.7.0" level="project" />
     <orderEntry type="library" name="Maven: javax.xml.bind:jaxb-api:2.3.1" level="project" />
     <orderEntry type="library" name="Maven: javax.activation:javax.activation-api:1.2.0" level="project" />

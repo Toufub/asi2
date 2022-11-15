@@ -1,0 +1,1 @@
+export const selectedCardId = (state) => state.selectedCardId;
