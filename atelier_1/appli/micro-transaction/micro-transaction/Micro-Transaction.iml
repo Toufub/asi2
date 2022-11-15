@@ -116,6 +116,16 @@
     <orderEntry type="library" scope="TEST" name="Maven: org.springframework:spring-test:5.3.1" level="project" />
     <orderEntry type="library" scope="TEST" name="Maven: org.xmlunit:xmlunit-core:2.7.0" level="project" />
     <orderEntry type="library" scope="RUNTIME" name="Maven: com.h2database:h2:1.4.200" level="project" />
-    <orderEntry type="module" module-name="Micro-Transaction-Public" />
+    <orderEntry type="module" module-name="micro-asi2-public" />
+    <orderEntry type="library" name="Maven: org.springframework.boot:spring-boot-starter-activemq:2.4.0" level="project" />
+    <orderEntry type="library" name="Maven: org.springframework:spring-jms:5.3.1" level="project" />
+    <orderEntry type="library" name="Maven: org.springframework:spring-messaging:5.3.1" level="project" />
+    <orderEntry type="library" name="Maven: org.apache.activemq:activemq-broker:5.16.0" level="project" />
+    <orderEntry type="library" name="Maven: org.apache.activemq:activemq-client:5.16.0" level="project" />
+    <orderEntry type="library" name="Maven: org.fusesource.hawtbuf:hawtbuf:1.11" level="project" />
+    <orderEntry type="library" name="Maven: org.apache.geronimo.specs:geronimo-j2ee-management_1.1_spec:1.0.1" level="project" />
+    <orderEntry type="library" name="Maven: org.apache.activemq:activemq-openwire-legacy:5.16.0" level="project" />
+    <orderEntry type="library" name="Maven: jakarta.jms:jakarta.jms-api:2.0.3" level="project" />
+    <orderEntry type="library" name="Maven: org.projectlombok:lombok:1.18.16" level="project" />
   </component>
 </module>

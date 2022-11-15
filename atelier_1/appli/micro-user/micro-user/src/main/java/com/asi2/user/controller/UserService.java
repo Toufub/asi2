@@ -1,5 +1,7 @@
 package com.asi2.user.controller;
 
+import com.asi2.common.model.UserDTO;
+import com.asi2.user.tools.UserMapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -20,7 +22,7 @@ public class UserService {
     }
 
     public User getUser(int id){
-        Optional<User> usersDaoOptional = userRepository.findById(UUID.fromString(String.valueOf(id)));
+        Optional<User> usersDaoOptional = userRepository.findById(id);
         if(usersDaoOptional.isPresent()){
             return usersDaoOptional.get();
         } else {
@@ -28,8 +30,12 @@ public class UserService {
         }
     }
 
+    public User getByLogin(String login) {
+        return userRepository.findByUsername(login);
+    }
+
     public void deleteUser(final int id) {
-        userRepository.deleteById(UUID.fromString(String.valueOf(id)));
+        userRepository.deleteById(id);
     }
 
     public User createUser(User user) {
@@ -37,25 +43,16 @@ public class UserService {
         return savedUser;
     }
 
-    public User putUser(final int id, double money) {
-        return (userRepository.findById(UUID.fromString(String.valueOf(id)))
+    public UserDTO putUser(final int id, UserDTO newUser) {
+        return this.userRepository.findById(id)
                 .map(user -> {
-                    user.SetMoney(money);
-                    return userRepository.save(user);
+                    user.setAccount(newUser.getAccount());
+                    return UserMapper.UserToDTO(this.userRepository.save(user));
                 })
                 .orElseGet(() -> {
                     return null;
-                }));
+                });
     }
 
-    public User checkLogin(String username, String password){
-        User user = userRepository.findByUsername(username);
-        if(user != null && password != ""){
-            if(password.equals(user.GetPassword())){
-                return user;
-            }
-        }
-        return null;
-    }
 
 }

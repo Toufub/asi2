@@ -1,6 +1,6 @@
 package com.asi2.transaction.tools;
 
-import com.asi2.transaction.model.TransactionDTO;
+import com.asi2.common.model.TransactionDTO;
 import com.asi2.transaction.model.Transaction;
 
 public class TransactionMapper {
@@ -11,7 +11,7 @@ public class TransactionMapper {
         transactionDTO.setTransactionDate(transaction.getTransactionDate());
         transactionDTO.setBuyerId(transaction.getBuyerId());
         transactionDTO.setCardId(transaction.getCardId());
-        transactionDTO.setSellerId(transaction.getSellerId());
+        transactionDTO.setUserId(transaction.getUserId());
         transactionDTO.setPrice(transaction.getPrice());
         return transactionDTO;
     }
@@ -22,7 +22,7 @@ public class TransactionMapper {
         transaction.setTransactionDate(transactionDTO.getTransactionDate());
         transaction.setBuyerId(transactionDTO.getBuyerId());
         transaction.setCardId(transactionDTO.getCardId());
-        transaction.setSellerId(transactionDTO.getSellerId());
+        transaction.setUserId(transactionDTO.getUserId());
         transaction.setPrice(transactionDTO.getPrice());
         return transaction;
     }

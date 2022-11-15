@@ -41,14 +41,26 @@
 			<artifactId>h2</artifactId>
 			<scope>runtime</scope>
 		</dependency>
-
 		<dependency>
-			<groupId>com.asi2.transaction</groupId>
-			<artifactId>Micro-Transaction-Public</artifactId>
+			<groupId>com.asi2.common</groupId>
+			<artifactId>micro-asi2-public</artifactId>
 			<version>0.0.1-SNAPSHOT</version>
 		</dependency>
-
-	</dependencies>
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-activemq</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>com.asi2.common</groupId>
+			<artifactId>micro-asi2-public</artifactId>
+			<version>0.0.1-SNAPSHOT</version>
+			<scope>compile</scope>
+		</dependency>
+        <dependency>
+            <groupId>org.projectlombok</groupId>
+            <artifactId>lombok</artifactId>
+        </dependency>
+    </dependencies>
 
 	<build>
 		<plugins>
