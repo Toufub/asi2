@@ -42,7 +42,7 @@ public class MicroTransactionService {
 		return tInDb.getId();
 	}
 
-	public TransactionDTO modifyTransaction(Transaction newTransaction, Integer id) {
+	public TransactionDTO modifyTransaction(Integer id, TransactionDTO newTransaction) {
 		return this.tRepo.findById(id)
 				.map(transaction -> {
 					transaction.setBuyerId(newTransaction.getBuyerId());
