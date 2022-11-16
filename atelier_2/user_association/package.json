@@ -1,0 +1,14 @@
+{
+  "name": "user_association",
+  "version": "1.0.0",
+  "description": "phase2",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "moote",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.18.2"
+  }
+}
