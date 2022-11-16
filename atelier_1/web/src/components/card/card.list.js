@@ -1,9 +1,11 @@
 import React, { useEffect, useState } from "react";
-import { useDispatch } from "react-redux";
-import { setSelectedCardId } from '../../core/card.actions.js';
+import { useDispatch, useSelector } from "react-redux";
+import { setSelectedCardId } from "../../core/client.actions.js";
+import { selectedClientId } from "../../core/client.selector.js";
 
-function CardList() {
+function CardList(props) {
   const [cards, setCards] = useState([]);
+  const userId = useSelector(selectedClientId);
 
   const dispatch = useDispatch();
 
@@ -12,15 +14,19 @@ function CardList() {
   };
 
   useEffect(() => {
-    fetch("https://asi2-backend-market.herokuapp.com/cards")
+    const url = "https://asi2-backend-market.herokuapp.com/cards";
+    fetch(url)
       .then((resp) => resp.json())
       .then((values) => {
-        setCards(values);
+        setCards([]);
+        console.log(userId,props.mine,values.filter((x) => (x.userId = userId)))
+        if (props.mine && userId) setCards(values.filter((x) => (x.userId = userId)));
+        else setCards(values);
       });
   }, []);
 
   const listItems = cards.map((card) => (
-    <tr className="d-flex cursor-pointer" key={card.id}  onClick={() => selectCard(card.id)}>
+    <tr className="d-flex cursor-pointer" key={card.id} onClick={() => selectCard(card.id)}>
       <td style={{ flexBasis: "15%" }}>{card.name}</td>
       <td style={{ flexBasis: "20%" }}>{card.description}</td>
       <td style={{ flexBasis: "19%" }}>{card.family}</td>

@@ -5,7 +5,7 @@ import { selectedCardId } from "../../core/client.selector";
 import { selectedClientId } from "../../core/client.selector";
 import { useSelector } from "react-redux";
 
-function CardBuy() {
+function CardMine() {
   const [cardSelected, selectCard] = useState(null);
   const cardSelectedId = useSelector(selectedCardId);
   const userId = useSelector(selectedClientId);
@@ -20,8 +20,8 @@ function CardBuy() {
     }
   }, [cardSelectedId]);
 
-  const buy = () => {
-    fetch(`https://asi2-backend-market.herokuapp.com/store/buy`, {
+  const sell = () => {
+    fetch(`https://asi2-backend-market.herokuapp.com/store/sell`, {
       method: "POST",
       headers: {
           'Content-Type': 'application/json',
@@ -39,16 +39,16 @@ function CardBuy() {
   return (
     <div className="w-100 d-flex p-3">
       <div style={{ flexBasis: "50%" }} className="flex-grow-1">
-        <h3>Market</h3>
-        <CardList />
+        <h3>My cards</h3>
+        <CardList mine={true}/>
       </div>
       {cardSelected && (
         <div className="d-flex justify-content-center align-items-center w-100" style={{ flexBasis: "50%" }}>
           <div  className="mt-5">
             <CardGeneral card={cardSelected} />
             <div className="text-center mt-2">
-              <button className="btn btn-success" onClick={buy}>
-                Buy
+              <button className="btn btn-success" onClick={sell}>
+                Sell
               </button>
             </div>
           </div>
@@ -58,4 +58,4 @@ function CardBuy() {
   );
 }
 
-export default CardBuy;
+export default CardMine;
