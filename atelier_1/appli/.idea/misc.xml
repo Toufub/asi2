@@ -4,6 +4,7 @@
     <option name="originalFiles">
       <list>
         <option value="$PROJECT_DIR$/micro-user/micro-user/pom.xml" />
+        <option value="$PROJECT_DIR$/micro-transaction/micro-transaction/pom.xml" />
       </list>
     </option>
   </component>

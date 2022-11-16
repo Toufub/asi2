@@ -5,32 +5,19 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="73a51615-e8db-4e11-8906-94820faed7d8" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_asi2_common_micro_asi2_public_0_0_1_SNAPSHOT.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Atelier2/chat/services/gameMapper.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Atelier2/chat/services/userMapper.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Atelier2/chat/www/css/styles.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Atelier2/chat/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/../../Atelier2/chat/app.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../Atelier2/chat/www/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/../../Atelier2/chat/www/index.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../Atelier2/chat/www/js/scripts.js" beforeDir="false" afterPath="$PROJECT_DIR$/../../Atelier2/chat/www/js/scripts.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__javax_activation_javax_activation_api_1_2_0.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__javax_xml_bind_jaxb_api_2_3_1.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_mapstruct_mapstruct_1_4_2_Final.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/micro-asi2-public/target/classes/com/asi2/common/model/CardDTO.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/micro-asi2-public/target/classes/com/asi2/common/model/TransactionDTO.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/micro-asi2-public/target/classes/com/asi2/common/model/UserDTO.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/micro-card/micro-card/target/classes/com/asi2/card/MicroCard.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/micro-card/micro-card/target/classes/com/asi2/card/controller/CardController.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/micro-card/micro-card/target/classes/com/asi2/card/controller/CardRepository.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/micro-card/micro-card/target/classes/com/asi2/card/controller/CardService.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/micro-card/micro-card/target/classes/com/asi2/card/jms/JmsConsumer.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/micro-card/micro-card/target/classes/com/asi2/card/jms/JmsProducer.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/micro-card/micro-card/target/classes/com/asi2/card/model/Card.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/micro-card/micro-card/target/classes/com/asi2/card/tools/CardMapper.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/micro-user/micro-user/micro-user.iml" beforeDir="false" afterPath="$PROJECT_DIR$/micro-user/micro-user/micro-user.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/micro-user/micro-user/target/classes/com/asi2/user/controller/UserController.class" beforeDir="false" afterPath="$PROJECT_DIR$/micro-user/micro-user/target/classes/com/asi2/user/controller/UserController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/micro-user/micro-user/target/classes/com/asi2/user/controller/UserService.class" beforeDir="false" afterPath="$PROJECT_DIR$/micro-user/micro-user/target/classes/com/asi2/user/controller/UserService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/micro-user/micro-user/target/classes/com/asi2/user/jms/JmsConsumer.class" beforeDir="false" afterPath="$PROJECT_DIR$/micro-user/micro-user/target/classes/com/asi2/user/jms/JmsConsumer.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/micro-user/micro-user/target/classes/com/asi2/user/jms/JmsProducer.class" beforeDir="false" afterPath="$PROJECT_DIR$/micro-user/micro-user/target/classes/com/asi2/user/jms/JmsProducer.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/micro-transaction/micro-transaction/Micro-Transaction.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/micro-user/micro-user/src/main/java/com/asi2/user/tools/UserMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/micro-user/micro-user/src/main/java/com/asi2/user/tools/UserMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/micro-user/micro-user/target/classes/com/asi2/user/tools/UserMapper.class" beforeDir="false" afterPath="$PROJECT_DIR$/micro-user/micro-user/target/classes/com/asi2/user/tools/UserMapper.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -77,7 +64,7 @@
     "project.structure.last.edited": "Project",
     "project.structure.proportion": "0.0",
     "project.structure.side.proportion": "0.0",
-    "spring.configuration.checksum": "895088fd07a33b5ffd4cc675396a67f8"
+    "spring.configuration.checksum": "016ca2619ab7201d595815614592bc99"
   }
 }]]></component>
   <component name="RecentsManager">
@@ -144,7 +131,10 @@
       <workItem from="1668439491853" duration="4073000" />
       <workItem from="1668496160329" duration="11909000" />
       <workItem from="1668515674706" duration="5855000" />
-      <workItem from="1668526182808" duration="1323000" />
+      <workItem from="1668526182808" duration="1326000" />
+      <workItem from="1668542177612" duration="917000" />
+      <workItem from="1668582701780" duration="2720000" />
+      <workItem from="1668602768208" duration="632000" />
     </task>
     <servers />
   </component>
