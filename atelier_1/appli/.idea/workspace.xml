@@ -5,19 +5,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="73a51615-e8db-4e11-8906-94820faed7d8" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/../../Atelier2/chat/services/gameMapper.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../Atelier2/chat/services/userMapper.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../Atelier2/chat/www/css/styles.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Atelier2/chat/io/gameManager.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Atelier2/chat/io/msgManager.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Atelier2/chat/io/userManager.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../Atelier2/chat/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/../../Atelier2/chat/app.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Atelier2/chat/www/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/../../Atelier2/chat/www/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Atelier2/chat/services/gameMapper.js" beforeDir="false" afterPath="$PROJECT_DIR$/../../Atelier2/chat/services/gameMapper.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../Atelier2/chat/www/js/scripts.js" beforeDir="false" afterPath="$PROJECT_DIR$/../../Atelier2/chat/www/js/scripts.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/micro-transaction/micro-transaction/Micro-Transaction.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/micro-user/micro-user/src/main/java/com/asi2/user/tools/UserMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/micro-user/micro-user/src/main/java/com/asi2/user/tools/UserMapper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/micro-user/micro-user/target/classes/com/asi2/user/tools/UserMapper.class" beforeDir="false" afterPath="$PROJECT_DIR$/micro-user/micro-user/target/classes/com/asi2/user/tools/UserMapper.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -50,23 +44,23 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RequestMappingsPanelOrder0": "0",
-    "RequestMappingsPanelOrder1": "1",
-    "RequestMappingsPanelWidth0": "75",
-    "RequestMappingsPanelWidth1": "75",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "last_opened_file_path": "D:/eloi_cambray/Documents/CPE/ASI2/asi2/Atelier2",
-    "project.structure.last.edited": "Project",
-    "project.structure.proportion": "0.0",
-    "project.structure.side.proportion": "0.0",
-    "spring.configuration.checksum": "016ca2619ab7201d595815614592bc99"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RequestMappingsPanelOrder0&quot;: &quot;0&quot;,
+    &quot;RequestMappingsPanelOrder1&quot;: &quot;1&quot;,
+    &quot;RequestMappingsPanelWidth0&quot;: &quot;75&quot;,
+    &quot;RequestMappingsPanelWidth1&quot;: &quot;75&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;last_opened_file_path&quot;: &quot;D:/eloi_cambray/Documents/CPE/ASI2/asi2/Atelier2&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Project&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;,
+    &quot;spring.configuration.checksum&quot;: &quot;016ca2619ab7201d595815614592bc99&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="D:\eloi_cambray\Documents\CPE\ASI2\asi2\atelier_1\appli\micro-card\micro-card\src\main\resources" />
@@ -134,7 +128,8 @@
       <workItem from="1668526182808" duration="1326000" />
       <workItem from="1668542177612" duration="917000" />
       <workItem from="1668582701780" duration="2720000" />
-      <workItem from="1668602768208" duration="632000" />
+      <workItem from="1668602768208" duration="634000" />
+      <workItem from="1668688270489" duration="910000" />
     </task>
     <servers />
   </component>

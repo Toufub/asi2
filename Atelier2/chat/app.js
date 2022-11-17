@@ -7,27 +7,44 @@ const io = new Server(server);
 
 // private services
 const UserMapper = require('./services/userMapper.js');
-const GameMapper = require('./services/gameMapper');
+const GameMapper = require('./services/gameMapper.js');
+const UserManager = require('./io/userManager.js');
+const MsgManager = require('./io/msgManager.js');
+const GameManager = require('./io/gameManager.js')
 
 const userMapper = new UserMapper();
 const gameMapper = new GameMapper(userMapper);
+
+const userManager = new UserManager(userMapper);
+const msgManager = new MsgManager(userMapper);
+const gameManager = new GameManager(userMapper, gameMapper);
 
 app.use(express.static('www'))
 
 io.on('connection', function(socket) {
 
-    socket.on('send-login', function (login) {
-        if(userMapper.add_user(login, socket.id)) {
-            socket.login = login;
-            socket.emit("welcome-message", userMapper.get_all_logins_connected());
-            socket.broadcast.emit("connect-event", login);
-            console.log(login + " join.");
-        } else {
-            socket.emit("forbidden", "already-use");
-            socket.disconnect();
+    socket.on("data", function (data) {
+
+        switch(data.type) {
+            case "user":
+                console.log("...User data...");
+                userManager.dispatch(socket, data.action, data.message);
+                break;
+            case "msg":
+                console.log("...Msg data...");
+                msgManager.dispatch(socket, data.action, data.message);
+                break;
+            case "game":
+                console.log("...Game data...");
+                gameManager.dispatch(socket, data.action, data.message);
+                break;
+            default:
+                console.log("...Incorrect data...");
         }
+
     });
 
+    // impossible de mettre dans le onAny
     socket.on('disconnect', () => {
         if(userMapper.check_user_connection(socket.login)) {
             userMapper.remove_user(socket.login);
@@ -35,27 +52,6 @@ io.on('connection', function(socket) {
             socket.broadcast.emit("disconnect-event", socket.login);
         }
     });
-
-    socket.on('message', (msg) => {
-        let dest = userMapper.get_tchatting_partner(socket.login);
-        if(dest === false) {
-            socket.broadcast.emit("message", "From " + socket.login + ": " + msg);
-            socket.emit("message", "You said: " + msg);
-        } else {
-            socket.to(userMapper.get_socket_id(dest)).emit(
-                "message", "From " + socket.login + " to You: " + msg);
-            socket.emit("message", "You said to " + dest + ": " + msg);
-        }
-    });
-
-    socket.on('tchatting-with', function(other_login) {
-        if(userMapper.create_tchatting_room(socket.login, other_login) === false) {
-            console.log(socket.login + " discuss with everybody.");
-        } else {
-            console.log(socket.login + " discuss with " + userMapper.get_tchatting_partner(socket.login) + ".");
-        }
-    });
-
 });
 
 server.listen(3000, () => {

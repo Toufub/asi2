@@ -1,22 +1,18 @@
-var socket = io();
+let socket = io();
 
-//var self_login = getCookie("login");
+let probable_login = ["jdoe555","jdoe444","jdoe333", "jdoe222", "jdoe111"];
+let self_login = probable_login[getRandomInt(5)];
 
-var probable_login = ["jdoe555","jdoe444","jdoe333", "jdoe222", "jdoe111"];
-var self_login = probable_login[getRandomInt(5)];
+let messages = document.getElementById('messages');
+let form = document.getElementById('form');
+let input = document.getElementById('input');
 
-var tchatting_with = "";
-
-var messages = document.getElementById('messages');
-var form = document.getElementById('form');
-var input = document.getElementById('input');
-
-var connected_users = [];
+let connected_users = [];
 
 document.addEventListener("DOMContentLoaded", function(event) {
     //setCookie("login", "jdoe222", 1);
     if(self_login) {
-        socket.emit('send-login', self_login);
+        send_data('user', 'send-login', self_login);
     }
     get_users_list();
 });
@@ -24,7 +20,7 @@ document.addEventListener("DOMContentLoaded", function(event) {
 form.addEventListener('submit', function(e) {
     e.preventDefault();
     if (input.value) {
-        socket.emit('message', input.value);
+        send_data('msg', 'message', input.value);
         input.value = '';
     }
 });
@@ -58,6 +54,14 @@ socket.on('disconnect-event', function(login) {
     update_states_users();
 });
 
+function send_data(type, action, message) {
+    socket.emit('data', {
+        type: type,
+        action: action,
+        message: message
+    })
+}
+
 function get_users_list() {
     document.getElementById("users").innerHTML = "<li class='list-group-item fw-bold'>Connected users :</li>";
     send_ajax_request("http://127.0.0.1:8081/users", "GET", function (users) {
@@ -78,7 +82,7 @@ function get_users_list() {
 
 function update_states_users() {
     let elems = document.getElementsByClassName("user-list-item");
-    for (var i = 0; i < elems.length; i++) {
+    for (let i = 0; i < elems.length; i++) {
         let elem = elems[i];
         elem.classList.add("disabled");
         elem.classList.remove("pointer");
@@ -95,7 +99,7 @@ function onclick_to_user() {
         if(this.classList.contains("active")) {
             this.classList.remove("active");
             append_message("Your tchatting with everybody.");
-            socket.emit("tchatting-with", "");
+            send_data("msg", "tchatting-with", "");
         } else {
             let elems = document.getElementsByClassName("user-list-item");
             for (var i = 0; i < elems.length; i++) {
@@ -104,7 +108,7 @@ function onclick_to_user() {
             }
             this.classList.add("active");
             append_message("Your tchatting with " + this.login + ".");
-            socket.emit("tchatting-with", this.login);
+            send_data("msg", "tchatting-with", this.login);
         }
     }
 }
