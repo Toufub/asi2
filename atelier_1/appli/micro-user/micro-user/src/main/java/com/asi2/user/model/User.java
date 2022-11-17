@@ -1,5 +1,6 @@
 package com.asi2.user.model;
 
+import java.io.Serializable;
 import java.util.Objects;
 import java.util.UUID;
 
@@ -9,82 +10,84 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 
 @Entity
-public class User {
+public class User implements Serializable {
 
 	@Id
 	@GeneratedValue(strategy = GenerationType.AUTO)
-	private int id;
-	private String name;
-	private String surname;
-	private String password;
-	private double money;
+	private Integer id;
+	private String login;
+	private String lastName;
+	private String surName;
+	private String pwd;
+	private double account;
 
 	public User() {
+
 	}
 
-	public User(String name, String surname, String password, double money) {
-		this.name = name;
-		this.surname = surname;
-		this.password = password;
-		this.money = money;
+	public User(Integer id, String login, String lastName, String surName, String pwd, double account) {
+		this.id = id;
+		this.login = login;
+		this.lastName = lastName;
+		this.surName = surName;
+		this.pwd = pwd;
+		this.account = account;
 	}
 
-	public int GetId() {
+	public Integer getId() {
 		return id;
 	}
 
-	public void SetId(int id) {
+	public void setId(Integer id) {
 		this.id = id;
 	}
 
-	public String GetName() {
-		return name;
+	public String getLogin() {
+		return login;
 	}
 
-	public void SetName(String name) {
-		this.name = name;
+	public void setLogin(String login) {
+		this.login = login;
 	}
 
-	public String GetSurname() {
-		return surname;
+	public String getLastName() {
+		return lastName;
 	}
 
-	public void SetSurname(String surname) {
-		this.surname = surname;
+	public void setLastName(String lastName) {
+		this.lastName = lastName;
 	}
 
-	public String GetPassword() {
-		return password;
+	public String getSurName() {
+		return surName;
 	}
 
-	public void SetPassword(String password) {
-		this.password = password;
+	public void setSurName(String surName) {
+		this.surName = surName;
 	}
 
-	public double GetMoney() {
-		return this.money;
+	public String getPwd() {
+		return pwd;
 	}
 
-	public void SetMoney(double money) {
-		this.money = money;
+	public void setPwd(String pwd) {
+		this.pwd = pwd;
 	}
 
-    @Override
-    public String toString() {
-        return "User{" +
-                "id =" + id +
-                ", name ='" + name + '\'' +
-                ", password ='" + password + '\'' +
-                ", balance =" + money +
-                '}';
-    }
+	public double getAccount() {
+		return account;
+	}
 
-    @Override
+	public void setAccount(double account) {
+		this.account = account;
+	}
+
+	@Override
     public boolean equals(Object o) {
         if (o == this) return true;
         if (!(o instanceof User)) return false;
         User other = (User) o;
-        return this.GetId() == other.GetId();
+        return this.getId() == other.getId();
     }
 
     @Override

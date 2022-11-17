@@ -7,7 +7,7 @@ import java.util.concurrent.ThreadLocalRandom;
 
 import org.springframework.stereotype.Service;
 
-import com.asi2.transaction.model.TransactionDTO;
+import com.asi2.common.model.TransactionDTO;
 import com.asi2.transaction.model.Transaction;
 import com.asi2.transaction.tools.TransactionMapper;
 @Service
@@ -42,7 +42,7 @@ public class MicroTransactionService {
 		return tInDb.getId();
 	}
 
-	public TransactionDTO modifyTransaction(Transaction newTransaction, Integer id) {
+	public TransactionDTO modifyTransaction(Integer id, TransactionDTO newTransaction) {
 		return this.tRepo.findById(id)
 				.map(transaction -> {
 					transaction.setBuyerId(newTransaction.getBuyerId());

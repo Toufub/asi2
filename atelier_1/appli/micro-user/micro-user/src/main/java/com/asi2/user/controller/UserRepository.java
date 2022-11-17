@@ -9,7 +9,7 @@ import com.asi2.user.model.User;
 import java.util.UUID;
 
 @Repository
-public interface UserRepository extends CrudRepository<User, UUID> {
-    @Query("select u from User u where u.name = ?1")
+public interface UserRepository extends CrudRepository<User, Integer> {
+    @Query("select u from User u where u.login = ?1")
     public User findByUsername(String username);
 }

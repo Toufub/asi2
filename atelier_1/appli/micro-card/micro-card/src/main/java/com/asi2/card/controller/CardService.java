@@ -4,6 +4,9 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
 
+import com.asi2.card.tools.CardMapper;
+import com.asi2.common.model.CardDTO;
+import com.asi2.common.model.TransactionDTO;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import com.asi2.card.model.Card;
@@ -17,9 +20,20 @@ public class CardService {
 		this.cRepo=cRepo;
 	}
 
-	public int addCard(Card c) {
-		Card createdCard=cRepo.save(c);
+	public int addCard(CardDTO c) {
+		Card createdCard=cRepo.save(CardMapper.FromDTOToTransaction(c));
 		return createdCard.getId();
+	}
+	public CardDTO modifyCard(Integer id, CardDTO newCard) {
+		return this.cRepo.findById(id)
+				.map(card -> {
+					card.setPrice(newCard.getPrice());
+					card.setUserId(newCard.getUserId());
+					return CardMapper.FromCardToDTO(this.cRepo.save(card));
+				})
+				.orElseGet(() -> {
+					return null;
+				});
 	}
 
 	public Card getCard(int id) {

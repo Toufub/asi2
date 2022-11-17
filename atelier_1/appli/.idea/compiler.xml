@@ -6,16 +6,44 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
+<<<<<<< HEAD
         <module name="Micro-card" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
       <module name="Micro-card" target="11" />
+=======
+        <module name="micro-user" />
+        <module name="Micro-Transaction" />
+        <module name="Micro-card" />
+        <module name="micro-asi2-public" />
+        <module name="Micro-Auth" />
+      </profile>
+    </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="micro-asi2-public" target="11" />
+      <module name="micro-atelier-public" target="11" />
+      <module name="Micro-Auth" target="11" />
+      <module name="Micro-Auth-Public" target="11" />
+      <module name="Micro-card" target="11" />
+      <module name="Micro-Card-Public" target="11" />
+      <module name="Micro-Transaction" target="11" />
+      <module name="Micro-Transaction-Public" target="11" />
+      <module name="micro-user" target="11" />
+      <module name="micro-user-public" target="11" />
+>>>>>>> 92b77567c946c6329f636075d722e392eddfc8eb
     </bytecodeTargetLevel>
   </component>
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+<<<<<<< HEAD
       <module name="Micro-card" options="-parameters" />
+=======
+      <module name="Micro-Auth" options="-parameters" />
+      <module name="Micro-Transaction" options="-parameters" />
+      <module name="Micro-card" options="-parameters" />
+      <module name="micro-user" options="-parameters" />
+>>>>>>> 92b77567c946c6329f636075d722e392eddfc8eb
     </option>
   </component>
 </project>
